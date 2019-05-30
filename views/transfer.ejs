@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/transfer.css">
+</head>
+<body>
+
+
+   <div class="nav">
+                <div class="nav-content">
+                    <a href="/"><img src="/Creditte.png"></a>
+                </div>
+            </div>
+
+    <div class="main">
+            <div class="user1">
+                    <h1>User 1</h1>
+                <p>Name: <%= firstuser[0].name %></p>
+                <p>Email: <%= firstuser[0].email %></p>
+                <p>Credits: <%= firstuser[0].credits %></p>
+            </div>
+            <div class="user2">
+                    <h1>User 2</h1>
+                <p>Name: <%= seconduser[0].name %></p>
+                <p>Email: <%= seconduser[0].email %></p>
+                <p>Credits: <%= seconduser[0].credits %></p>
+            </div>
+    </div>
+    <form action="/transfer" method="POST" class="center">
+        <label>Enter credits to transfer:</label>
+        <input type="number" name="credits" value="0" id="credit">
+        <input type="hidden" name="user1" value=<%=firstuser[0].name%>>
+        <input type="hidden" name="user2" value=<%=seconduser[0].name%>>
+        <button class="center">Transfer</button>
+    </form>
+    <p class="center" id="bttext">By clicking on this button you will transfer credits from <%= firstuser[0].name %> to <%= seconduser[0].name %></p>
+
+
+
+    <script src="/transfer.js"></script>
+</body>
+</html>

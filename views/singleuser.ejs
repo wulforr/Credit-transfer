@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>select another user</title>
+   <link rel="stylesheet" href="/sustyle.css">
+</head>
+<body>
+    
+
+
+        <div class="nav">
+                <div class="nav-content">
+                    <a href="/"><img src="/Creditte.png"></a>
+                </div>
+            </div>
+
+    <div class="main">
+        <div class="user1">
+                <h1>User 1</h1>
+            <p>Name: <%= firstuser[0].name %></p>
+            <p>Email: <%= firstuser[0].email %></p>
+            <p>Credits: <%= firstuser[0].credits %></p>
+        </div>
+        <div class="users">
+                <h1>Select user to transfer credits to</h1>
+
+                <%  result.forEach((user) => {   %>
+                    <% let url = "/user/" + firstuser[0].name + "/"+ user.name %>
+                    <% if(user.name != firstuser[0].name) { %>
+                    <a href= <%= url %>>
+                        <div class="user-field">
+                            <div class="name user-content"><%= user.name   %> </div>
+                            <div class="email user-content" id="email"> <%= user.email   %> </div>
+                            <div class="credit user-content"> <%= user.credits   %> </div>
+                        </div>
+                    </a>
+                    <% }}) %>
+        </div>
+
+    </div>
+</body>
+</html>

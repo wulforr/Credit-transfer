@@ -1,0 +1,68 @@
+body{
+    background-color: rgba(46, 49, 49, 1);
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+}
+.center{
+    margin: 0 auto;
+    text-align:center;
+}
+h1{
+    color:rgba(246, 36, 89, 1);
+    font-size:6rem;
+}
+.user-field{
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height:5%;
+    font-size:2rem;
+}
+.user-content{
+    text-align: left;
+}
+#email{
+    text-align: left;
+}
+a{
+    max-width: 80%;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color:rgba(246, 36, 89, 1);    
+}
+
+.user-content{
+    text-align: left;
+}
+
+#heading{
+    color:rgba(246, 36, 89, 1);    
+}
+h3{
+    font-size:2rem;
+    padding: 2%;
+    padding-bottom: 4%;
+}
+
+
+
+.nav{
+    display: flex;
+    justify-content: left;
+    margin: 0;
+}
+.nav-content{
+    font-size: 2rem;
+    color: rgba(246, 36, 89, 1);
+    padding: 1% 1%;
+    margin: 0;
+}
+img{
+    height: 80%;
+    width:50%;
+}

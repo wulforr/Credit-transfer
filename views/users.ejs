@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" href="/userstyle.css">
+</head>
+
+<body>
+
+        <div class="nav">
+                <div class="nav-content">
+                    <a href="/"><img src="Creditte.png"></a>
+                </div>
+            </div>
+    <h1 class="center">All Users</h1>
+
+    <h3 class="center">Select any user you want to transfer credit from</h3>
+    <div class= "user-field center" id="heading">
+        <div>Name</div>
+        <div>Email</div>
+        <div>Credits</div>
+    </div>
+        <%  result.forEach((user) => {   %>
+        <% let url = "/user/" + user.name %>
+        <a href= <%= url %>>
+            <div class = "user-field center" >
+                <div class="name user-content"><%= user.name   %> </div>
+                <div class="email user-content" id="email"> <%= user.email   %> </div>
+                <div class="credit user-content"> <%= user.credits   %> </div>
+            </div>
+        </a>
+        <% }) %>
+
+</body>
+
+</html>
